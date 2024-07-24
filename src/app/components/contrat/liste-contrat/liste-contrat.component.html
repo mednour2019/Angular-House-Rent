@@ -1,0 +1,39 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div id="main-content" class="file_manager">
+        <div class="container">            
+            <div class="row clearfix">
+                              
+                <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let c of Contrats;let i=index" style="width: 28%;">
+                    <div class="card">
+                        <div class="file">
+                            <a href="javascript:void(0);">
+                                <div class="hover">
+                                    <button type="button" class="btn btn-icon btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-bar-chart text-warning"></i>
+                                </div>
+                                <div class="file-name">
+                                    <p class="m-b-5 text-muted"><span style="font-size: 17px ;color: black;"> Start Date:</span>{{c.datedebut| date:'MM/dd/yyyy'}}</p>
+                                    <small style="font-size: 15px;">Id: {{c.id}} <span class="date text-muted"><span style="font-size: 17px ;color: black;">End Date:</span>{{c.datefin| date:'MM/dd/yyyy'}}</span></small>
+                                </div>
+                                <i class="fa fa-eye" style="margin-left:100px" (click)="visualiseLink(i)"></i>
+                                 <i class="fa fa-pencil"  style="margin-left: 30px;" ></i>
+                                
+                                
+
+                            </a>
+                          
+                            
+                        </div>
+                    </div>
+                </div>
+            
+               
+            </div>
+            
+        </div>
+    </div>
